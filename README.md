@@ -154,7 +154,7 @@ Ejecutar:
 python3 consintency.py
 ```
 >[!NOTE]
-> Cambiar los datos a ingresar, porquela prueba con los datos dentro del archivo, ya fueron agregados.
+> Cambiar los datos a ingresar, porque al hacer la prueba los datos dentro del archivo, ya fueron agregados.
 
 ## Autores
 ### Grupo4
