@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  cassandra1:
+    image: cassandra:latest
+    container_name: cassandra1
+    environment:
+      - CASSANDRA_CLUSTER_NAME=TestCluster
+      - CASSANDRA_SEEDS=cassandra1,cassandra2
+      - CASSANDRA_START_RPC=true
+      - MAX_HEAP_SIZE=1G
+      - HEAP_NEWSIZE=256M
+    ports:
+      - "9042:9042"
+    networks:
+      - cassandra_net
+    mem_limit: 2g
+    volumes:
+      - ./data/cassandra1:/var/lib/cassandra
+
+  cassandra2:
+    image: cassandra:latest
+    container_name: cassandra2
+    environment:
+      - CASSANDRA_CLUSTER_NAME=TestCluster
+      - CASSANDRA_SEEDS=cassandra1,cassandra2
+      - CASSANDRA_START_RPC=true
+      - MAX_HEAP_SIZE=1G
+      - HEAP_NEWSIZE=256M
+    networks:
+      - cassandra_net
+    mem_limit: 2g
+    depends_on:
+      - cassandra1
+    volumes:
+      - ./data/cassandra2:/var/lib/cassandra
+
+  cassandra3:
+    image: cassandra:latest
+    container_name: cassandra3
+    environment:
+      - CASSANDRA_CLUSTER_NAME=TestCluster
+      - CASSANDRA_SEEDS=cassandra1,cassandra2
+      - CASSANDRA_START_RPC=true
+      - MAX_HEAP_SIZE=1G
+      - HEAP_NEWSIZE=256M
+    networks:
+      - cassandra_net
+    mem_limit: 2g
+    depends_on:
+      - cassandra1
+    volumes:
+      - ./data/cassandra3:/var/lib/cassandra
+
+networks:
+  cassandra_net:
+    driver: bridge
+
