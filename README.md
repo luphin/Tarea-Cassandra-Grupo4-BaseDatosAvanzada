@@ -3,7 +3,7 @@
 En esta tarea, se requiere la creación de un clúster compuesto por tres nodos, con el objetivo de lograr la distribución eficiente de los datos.
 
 >[!IMPORTANT]
-> La vesion de python que fue utilizada fue la v.3.9.6
+> La version de python que fue utilizada fue la v.3.9.6
 
 ## Instrucciones de uso 
 
