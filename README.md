@@ -1,6 +1,8 @@
 # Tarea sobre el Sistema de Gestión de Bases de Datos NoSQL: Apache Cassandra
 
 En esta tarea, se requiere la creación de un clúster compuesto por tres nodos, con el objetivo de lograr la distribución eficiente de los datos.
+- (01 Tarea-Laboratorio-1-Cassandra)[https://github.com/luphin/Tarea-Cassandra-Grupo4-BaseDatosAvanzada/blob/main/documents/01%20Tarea-Laboratorio-1-Cassandra.pdf]
+- (InformeGrupo4)[https://github.com/luphin/Tarea-Cassandra-Grupo4-BaseDatosAvanzada/blob/main/documents/InformeGrupo4.pdf]
 
 >[!IMPORTANT]
 > La version de python que fue utilizada fue la v.3.9.6
